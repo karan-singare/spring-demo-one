@@ -16,16 +16,11 @@
      
     <bean id="myCoach" 
     	class="com.karansingare.springdemo.TrackCoach"
-    	scope="prototype">
+    	init-method="doMyStartupStuff"
+    	destroy-method="doMyCleanupStuff">
     	<!-- set up the constructor injection -->
     	<constructor-arg ref="myFortuneService"></constructor-arg>
     </bean>
     
    
 </beans>
-
-
-
-
-
-
